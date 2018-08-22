@@ -10,6 +10,7 @@
       <a-scene>
         <a-assets>
           <img id="wall_tex" src="img/white_wall.jpg">
+          <img id="stone_tile" src="img/stone-tile02.jpg">
         </a-assets>
 
         <a-sky id="sky" radius="5000" color="#c8c8c8"></a-sky>
@@ -18,7 +19,7 @@
           <a-cursor></a-cursor>
         </a-entity>
 
-        <a-plane id="left_wall"  src="#wall_tex" height="20" width="40" position="-20 0 0" rotation="0 90 0"></a-plane>
+        <a-plane id="left_wall"  src="#stone_tile" height="20" width="40" position="-20 0 0" rotation="0 90 0"></a-plane>
         <a-plane id="right_wall" src="#wall_tex" height="20" width="40" position="20 0 0" rotation="0 -90 0"></a-plane>
         <a-plane id="front_wall" src="#wall_tex" height="20" width="40" position="0 0 -20" rotation="0 0 0"></a-plane>
         <a-plane id="back_wall" src="#wall_tex" height="20" width="40" position="0 0 20" rotation="0 180 0"></a-plane>
