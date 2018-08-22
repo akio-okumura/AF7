@@ -16,7 +16,7 @@
 
         <a-sky id="sky" radius="5000" color="#ffffff"></a-sky>
 
-        <a-entity camera look-controls>
+        <a-entity id="camera" camera look-controls>
           <a-cursor></a-cursor>
         </a-entity>
 
@@ -35,7 +35,7 @@
         -->
 
         <a-entity id="floor" geometry="primitive: plane; width:100; height:100"
-                             material="src:#stone_tile; repeat: 10 10"
+                             material="src:#stone_tile; repeat: 25 25"
                              position="0 -10 0" rotation="-90 0 0"></a-entity>
 
           <a-box color="#0095DD" position="0 -1 -6" id="start_box" rotation="20 45 0" scale="1 1 1">
