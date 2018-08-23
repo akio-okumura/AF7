@@ -9,9 +9,7 @@
 
       <a-scene>
         <a-assets>
-          <img id="wall_tex" src="img/white_wall.jpg">
-          <img id="stone_tile" src="img/Brick.jpg">
-          <img id="bl_flooring" src="img/flooring-pattern-bk.jpg">
+          <img id="brick" src="img/Brick.jpg">
         </a-assets>
 
         <a-sky id="sky" radius="5000" color="#ffffff"></a-sky>
@@ -20,22 +18,30 @@
           <a-cursor></a-cursor>
         </a-entity>
 
+        <a-entity id="L-wall" geometry="primitive: plane; width:60; height:30"
+                              material="src:#brick; repeat: 1 1"
+                              position="0 0 0" rotation="0 90 0"></a-entity>
 
-        <a-plane id="left_walla"  src="#stone_tile" height="20" width="30" position="-20 0 15" rotation="0 90 0"></a-plane>
-        <a-plane id="left_wallb"  src="#stone_tile" height="20" width="30" position="-20 0 -15" rotation="0 90 0"></a-plane>
+        <a-entity id="R-wall" geometry="primitive: plane; width:60; height:30"
+                              material="src:#brick; repeat: 1 1"
+                              position="0 0 0" rotation="0 -90 0"></a-entity>
 
-        <a-plane id="right_walla" src="#stone_tile" height="20" width="30" position="20 0 15" rotation="0 -90 0"></a-plane>
-        <a-plane id="right_wallb" src="#stone_tile" height="20" width="30" position="20 0 -15" rotation="0 -90 0"></a-plane>
-
-        <a-plane id="front_wall" src="#stone_tile" height="20" width="40" position="0 0 -30" rotation="0 0 0"></a-plane>
-        <a-plane id="back_wall" src="#stone_tile" height="20" width="40" position="0 0 30" rotation="0 180 0"></a-plane>
+        <a-entity id="F-wall" geometry="primitive: plane; width:30; height:30"
+                              material="src:#brick; repeat: 1 1"
+                              position="0 0 -30" rotation="0 0 0"></a-entity>
 
 
-        <a-plane id="ceiling" src="#stone_tile" height="60" width="40" position="0 10 0" rotation="90 0 0"></a-plane>
+        <a-entity id="B-wall" geometry="primitive: plane; width:30; height:30"
+                              material="src:#brick; repeat: 1 1"
+                              position="0 0 30" rotation="0 180 0"></a-entity>
 
-        <a-entity id="floor" geometry="primitive: plane; width:100; height:100"
-                             material="src:#stone_tile; repeat: 5 5"
-                             position="0 -10 0" rotation="-90 0 0"></a-entity>
+        <a-entity id="ceiling" geometry="primitive: plane; width:30; height:60"
+                               material="src:#brick; repeat: 1 1"
+                               position="0 15 0" rotation="90 0 0"></a-entity>
+
+        <a-entity id="floor"   geometry="primitive: plane; width:30; height:60"
+                               material="src:#brick; repeat: 1 1"
+                               position="0 -15 0" rotation="-90 0 0"></a-entity>
 
           <a-box color="#0095DD" position="0 -1 -6" id="start_box" rotation="20 45 0" scale="1 1 1">
             <a-animation attribute="rotation"
