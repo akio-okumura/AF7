@@ -64,6 +64,8 @@
 
       <!-- C lights -->
       <a-entity id="C-Lights" position="0 0 -6">
+
+        <!-- up light -->
         <a-light type="point" color="#ec9e35" distance="10" position="-12 10 0">
           <a-animation attribute="intensity" from="0" to="2" delay="1000" dur="1000" fill="both"></a-animation>
         </a-light>
@@ -76,6 +78,16 @@
           <a-animation attribute="intensity" from="0" to="2" delay="1000" dur="1000" fill="both"></a-animation>
         </a-light>
 
+        <!-- center light -->
+        <a-light type="point" color="#ec9e35" distance="10" position="-12 0 0">
+          <a-animation attribute="intensity" from="0" to="2" delay="1000" dur="1000" fill="both"></a-animation>
+        </a-light>
+
+        <a-light type="point" color="#ec9e35" distance="10" position="12 0 0">
+          <a-animation attribute="intensity" from="0" to="2" delay="1000" dur="1000" fill="both"></a-animation>
+        </a-light>
+
+        <!-- down light -->
         <a-light type="point" color="#ec9e35" distance="10" position="-12 -10 0">
           <a-animation attribute="intensity" from="0" to="2" delay="1000" dur="1000" fill="both"></a-animation>
         </a-light>
