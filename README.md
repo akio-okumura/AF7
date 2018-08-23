@@ -45,6 +45,8 @@ fuseとは、一定時間対象にカーソルを乗せるとクリックが発�
 
 デフォルトでは使えませんが、a-cursorのfuseプロパティをonにすることで有効にできます。
 
+![A-Frameアニメーション自己定義](img/AFrame_event.jpg "アニメーション")
+
 ## font変更
 ```
       <a-text value="VR CAMP" font="V-GERB(bold)-msdf.json" negate="false" scale="5 5 1" position="0 3.5 -6" align="center"></a-text>
