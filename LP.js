@@ -1,4 +1,4 @@
 var camera = document.querySelector('#camera');
-var camera_z = camera.getAttribute('position');
+var camera_pos = camera.getAttribute('position');
 
-console.log(camera_z.z);
+console.log(camera_pos.z);
