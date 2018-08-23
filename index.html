@@ -183,7 +183,9 @@
       </a-entity>
 
       <!-- 環境光 -->
-      <a-light type="ambient" color="#4f6487" ></a-light>
+      <a-light type="ambient" color="#4f6487" >
+        <a-animation attribute="material.color" from="#000000" to="#4d4d4d" dur="3000"></a-animation>
+      </a-light>
 
     </a-scene>
   </body>
