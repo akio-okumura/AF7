@@ -14,9 +14,10 @@
 
       <a-entity link="href: space.html; image: #spaceThumbnail;
                       backgroundColor: #000000; borderColor: #000000"
-                position="0 0 -28" rotation="0 180 0" visible="false"
+                position="0 0 -28" rotation="0 180 0" scale="0 0 0"
       >
         <a-animation attribute="scale" from="0 0 0" to="10 10 10" delay="8000" dur="1000" easing="ease-in"></a-animation>
+            <a-entity text="color:white;align:center;font:kelsonsans;value:space.html;width:4" position="0 1.5 0" visible="false"></a-entity><a-entity geometry="primitive:sphere;segmentsWidth:64;segmentsHeight:64;phiLength:180;thetaLength:360" material="shader:portal;borderEnabled:0;pano:[object HTMLImageElement];side:back" rotation="0 180 0" position="" visible="false"></a-entity><a-entity geometry="primitive:sphere;radius:10;segmentsWidth:64;segmentsHeight:64" material="shader:portal;borderEnabled:0;pano:[object HTMLImageElement];side:back" visible="false"></a-entity>
     </a-entity>
 
       <!--
