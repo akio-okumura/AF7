@@ -6,20 +6,21 @@
   </head>
 
   <body>
+    <a-scene>
+      <a-assets>
+        <img id="brick" src="img/Brick.jpg">
+      </a-assets>
 
-      <a-scene>
-        <a-assets>
-          <img id="brick" src="img/Brick.jpg">
-        </a-assets>
+      <a-sky id="sky" radius="5000" color="#ffffff"></a-sky>
 
-        <a-sky id="sky" radius="5000" color="#ffffff"></a-sky>
+      <a-entity id="camera" camera look-controls>
+        <a-cursor></a-cursor>
+      </a-entity>
 
-        <a-entity id="camera" camera look-controls>
-          <a-cursor></a-cursor>
-        </a-entity>
-
+      <!-- Walls -->
+      <a-entity id="walls" position="0 0 0">
         <a-entity id="L-wall" geometry="primitive: plane; width:60; height:30"
-                              material="src:#brick; repeat: 1 1"
+                            material="src:#brick; repeat: 1 1"
                               position="15 0 0" rotation="0 90 0"></a-entity>
 
         <a-entity id="R-wall" geometry="primitive: plane; width:60; height:30"
@@ -42,18 +43,30 @@
         <a-entity id="floor"   geometry="primitive: plane; width:30; height:60"
                                material="src:#brick; repeat: 1 1"
                                position="0 -15 0" rotation="-90 0 0"></a-entity>
+      </a-entity>
 
-          <a-box color="#0095DD" position="0 -1 -6" id="start_box" rotation="20 45 0" scale="1 1 1">
-            <a-animation attribute="rotation"
-                         dur="5000"
-                         from="20 45 0"
-                         to="20 360 0"
-                         direction="alternate"
-                         repead="indefinite"
-                         easing="ease"
-                         ></a-animation>
-          </a-box>
+      <a-box color="#0095DD" position="0 -1 -6" id="start_box" rotation="20 45 0" scale="1 1 1">
+        <a-animation attribute="rotation"
+                     dur="5000"
+                     from="20 45 0"
+                     to="20 360 0"
+                     direction="alternate"
+                     repead="indefinite"
+                     easing="ease"
+        ></a-animation>
+      </a-box>
 
-      </a-scene>
+      <!-- Lights. -->
+      <a-light type="point" color="#94c6ff" distance="15" position="0 0 -12">
+        <a-animation attribute="intensity" from="0" to="2" delay="750" dur="500" fill="both"></a-animation>
+      </a-light>
+
+      <a-light type="point" color="#94c6ff" distance="17" position="0 0 -6">
+        <a-animation attribute="intensity" from="0" to="1" delay="500" dur="500" fill="both"></a-animation>
+      </a-light>
+
+      <a-light type="ambient" color="#4f6487" ></a-light>
+
+    </a-scene>
   </body>
 </html>
