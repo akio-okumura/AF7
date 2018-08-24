@@ -15,6 +15,8 @@ window.onload = function(){
         brick_scene.setAttribute('visible', 'false');
         brick_deleted = true;
       }
+
+      document.querySelector('#welcome').emit('2ndscene');
     }
   }, 100);
 };
