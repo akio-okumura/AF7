@@ -5,7 +5,7 @@ var camera_pos = camera.getAttribute('position');
 // document.querySelector('#portal').emit('url_jump');
 
 window.onload = function(){
-  var check_campos( function() {
+  var check_campos = setInterval( function() {
     if(camera_pos.z >= 15){
       var sceneEl = document.querySelector('a-scene');
       var entityEl = document.createElement('a-entity');
