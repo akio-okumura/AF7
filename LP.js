@@ -15,4 +15,5 @@ if(camera_pos.z >= 15){
   'position', {x: 0, y: 2, z: -3});
   // Do `.setAttribute()`s to initialize the entity.
   sceneEl.appendChild(entityEl);
+  console.log("z >= 15 now")
 }
