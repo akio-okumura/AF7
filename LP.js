@@ -10,7 +10,7 @@ window.onload = function(){
   var check_campos = setInterval( function() {
     if(!brick_deleted){
       if(camera_pos.z <= 1){
-        console.log("z <= 1 now");
+        console.log("BrickScene invisibled.");
         var brick_scene = document.querySelector('#BrickScene');
         brick_scene.setAttribute('visible', 'false');
         brick_deleted = true;
