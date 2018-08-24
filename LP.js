@@ -9,7 +9,7 @@ window.onload = function(){
     if(camera_pos.z <= 1){
       console.log("z <= 1 now");
       var brick_scene = document.querySelector('#BrickScene');
-      // brick_scene.setAttribute('visible', 'false');
+      brick_scene.setAttribute('visible', 'false');
     }
   }, 100);
 };
