@@ -11,9 +11,11 @@ window.onload = function(){
     if(!brick_deleted){
       // レンガ部屋が削除された時
       if(camera_pos.z <= 1){
-        console.log("BrickScene invisibled.");
+        document.querySelector('#welcome').emit('move');
+
         var brick_scene = document.querySelector('#BrickScene');
         brick_scene.setAttribute('visible', 'false');
+        console.log("BrickScene invisibled.");
         brick_deleted = true;
 
         // フェードインインターバル
@@ -33,8 +35,6 @@ window.onload = function(){
           }
         }, 10);
       }
-
-      // document.querySelector('#welcome').emit('second');
     }
   }, 100);
 };
