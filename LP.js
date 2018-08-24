@@ -16,7 +16,7 @@ window.onload = function(){
         brick_deleted = true;
       }
 
-      document.querySelector('#welcome').emit('2ndscene');
+      document.querySelector('#welcome').emit('second');
     }
   }, 100);
 };
