@@ -6,8 +6,8 @@ var camera_pos = camera.getAttribute('position');
 
 window.onload = function(){
   var check_campos = setInterval( function() {
-    if(camera_pos.z <= 15){
-      console.log("z <= 15 now");
+    if(camera_pos.z <= 1){
+      console.log("z <= 1 now");
       var brick_scene = document.querySelector('#BrickScene');
       // brick_scene.setAttribute('visible', 'false');
     }
