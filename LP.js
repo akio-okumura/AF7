@@ -4,7 +4,7 @@ var camera_pos = camera.getAttribute('position');
 // console.log(camera_pos.z);
 // document.querySelector('#portal').emit('url_jump');
 
-window.onload(
+window.onload = function(){
   var check_campos( function() {
     if(camera_pos.z >= 15){
       var sceneEl = document.querySelector('a-scene');
@@ -20,4 +20,4 @@ window.onload(
       console.log("z >= 15 now")
     }
   }, 100);
-);
+};
