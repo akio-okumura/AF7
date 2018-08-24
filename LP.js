@@ -25,4 +25,4 @@ var fade_out_welcome = setInterval( function() {
   var w_txt = document.querySelector('#welcome');
   if(w_txt.opacity == 1.0)
     w_txt.emit('out');
-});
+},100);
