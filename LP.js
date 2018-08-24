@@ -24,6 +24,6 @@ window.onload = function(){
 var fade_out_welcome = setInterval( function() {
   var w_txt = document.querySelector('#welcome');
   console.log(w_txt.getAttribute('opacity'));
-  if(w_txt.getAttribute('opacity') == 1.0)
+  if(w_txt.getAttribute('opacity') == 1.0 && brick_deleted)
     w_txt.emit('out');
 },100);
