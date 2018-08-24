@@ -12,8 +12,13 @@
         <img id="spaceThumbnail" src="img/Space.jpg">
       </a-assets>
 
+      <a-entity id="camera" camera look-controls wasd-controls>
+        <a-cursor></a-cursor>
+        <a-animation attribute="position" from="0 0 30" to="0 0 0" delay="3000" dur="10000" easing="ease-in-out"></a-animation>
+      </a-entity>
 
-      <a-entity id="BrickScene">
+
+      <a-entity id="BrickScene" position="0 0 30">
         <a-entity id="portal"
                 link="image: #spaceThumbnail;
                       backgroundColor: #000000; borderColor: #000000; on: null"
@@ -25,11 +30,6 @@
         <!--
         <a-sky id="sky" radius="5000" color="#ffffff"></a-sky>
         -->
-
-        <a-entity id="camera" camera look-controls wasd-controls>
-          <a-cursor></a-cursor>
-          <a-animation attribute="position" from="0 0 0" to="0 0 -27" delay="3000" dur="10000" easing="ease-in-out"></a-animation>
-        </a-entity>
 
         <!-- Walls -->
         <a-entity id="walls" position="0 0 0">
