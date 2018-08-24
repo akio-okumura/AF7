@@ -17,7 +17,7 @@ window.onload = function(){
       entityEl.setAttribute('position', {x: 0, y: 2, z: -3});
       // Do `.setAttribute()`s to initialize the entity.
       sceneEl.appendChild(entityEl);
-      console.log("z >= 15 now")
+      console.log("z >= 15 now");
     }
   }, 100);
 };
