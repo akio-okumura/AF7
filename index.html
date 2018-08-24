@@ -13,27 +13,26 @@
       </a-assets>
 
 
-      <a-entity id="portal"
+      <a-entity id="BrickScene">
+        <a-entity id="portal"
                 link="image: #spaceThumbnail;
                       backgroundColor: #000000; borderColor: #000000; on: null"
                 position="0 0 -28" rotation="0 180 0" scale="0 0 0"
-      >
-        <a-animation attribute="scale" from="0 0 0" to="10 10 10" delay="8000" dur="1000" easing="ease-in"></a-animation>
-    </a-entity>
+        >
+          <a-animation attribute="scale" from="0 0 0" to="10 10 10" delay="8000" dur="1000" easing="ease-in"></a-animation>
+        </a-entity>
 
-    <a-light type="directional" position="0 0 0" rotation="-90 0 0" target="#camera"></a-light>
+        <!--
+        <a-sky id="sky" radius="5000" color="#ffffff"></a-sky>
+        -->
 
-      <!--
-      <a-sky id="sky" radius="5000" color="#ffffff"></a-sky>
-      -->
+        <a-entity id="camera" camera look-controls wasd-controls>
+          <a-cursor></a-cursor>
+          <a-animation attribute="position" from="0 0 0" to="0 0 -27" delay="3000" dur="10000" easing="ease-in-out"></a-animation>
+        </a-entity>
 
-      <a-entity id="camera" camera look-controls wasd-controls>
-        <a-cursor></a-cursor>
-        <a-animation attribute="position" from="0 0 0" to="0 0 -27" delay="3000" dur="10000" easing="ease-in-out"></a-animation>
-      </a-entity>
-
-      <!-- Walls -->
-      <a-entity id="walls" position="0 0 0">
+        <!-- Walls -->
+        <a-entity id="walls" position="0 0 0">
         <a-entity id="L-wall" geometry="primitive: plane; width:60; height:30"
                             material="src:#brick; repeat: 1 1"
                               position="-15 0 0" rotation="0 90 0"></a-entity>
@@ -58,81 +57,41 @@
         <a-entity id="floor"   geometry="primitive: plane; width:30; height:60"
                                material="src:#brick; repeat: 1 1"
                                position="0 -15 0" rotation="-90 0 0"></a-entity>
-      </a-entity>
+        </a-entity>
 
-      <!-- Box
-      <a-box color="#0095DD" position="0 -1 -6" id="start_box" rotation="20 45 0" scale="1 1 1">
-        <a-animation attribute="rotation"
-                     dur="5000"
-                     from="20 45 0"
-                     to="20 360 0"
-                     direction="alternate"
-                     repead="indefinite"
-                     easing="ease"
-        ></a-animation>
-      </a-box>
-      -->
+        <!-- Lights. -->
 
-      <!-- Lights. -->
+        <!-- CBAの順にこっち側のライト -->
 
-      <!-- CBAの順にこっち側のライト -->
+        <!-- C lights -->
+        <a-entity id="C-Lights" position="0 0 -8">
+          <!-- up light -->
+          <a-light type="point" color="#ec9e35" distance="10" position="-12 10 0">
+            <a-animation attribute="intensity" from="0" to="1" delay="1000" dur="1000" fill="both"></a-animation>
+          </a-light>
 
-      <!-- C lights -->
-      <a-entity id="C-Lights" position="0 0 -8">
+          <a-light type="point" color="#ec9e35" distance="10" position="12 10 0">
+            <a-animation attribute="intensity" from="0" to="1" delay="1000" dur="1000" fill="both"></a-animation>
+          </a-light>
 
-        <!-- up light -->
-        <a-light type="point" color="#ec9e35" distance="10" position="-12 10 0">
-          <a-animation attribute="intensity" from="0" to="1" delay="1000" dur="1000" fill="both"></a-animation>
-        </a-light>
+          <a-light type="point" color="#ec9e35" distance="10" position="0 10 0">
+            <a-animation attribute="intensity" from="0" to="1" delay="1000" dur="1000" fill="both"></a-animation>
+          </a-light>
+        </a-entity>
 
-        <a-light type="point" color="#ec9e35" distance="10" position="12 10 0">
-          <a-animation attribute="intensity" from="0" to="1" delay="1000" dur="1000" fill="both"></a-animation>
-        </a-light>
+        <!-- B lights -->
+        <a-entity id="B-Lights" position="0 0 -17.5">
+          <a-light type="point" color="#ec9e35" distance="10" position="-12 10 0">
+            <a-animation attribute="intensity" from="0" to="1.5" delay="2000" dur="1000" fill="both"></a-animation>
+          </a-light>
 
-        <a-light type="point" color="#ec9e35" distance="10" position="0 10 0">
-          <a-animation attribute="intensity" from="0" to="1" delay="1000" dur="1000" fill="both"></a-animation>
-        </a-light>
+          <a-light type="point" color="#ec9e35" distance="10" position="12 10 0">
+            <a-animation attribute="intensity" from="0" to="1.5" delay="2000" dur="1000" fill="both"></a-animation>
+          </a-light>
 
-        <!-- center light -->
-        <!--
-        <a-light type="point" color="#ec9e35" distance="10" position="-12 0 0">
-          <a-animation attribute="intensity" from="0" to="1" delay="1000" dur="1000" fill="both"></a-animation>
-        </a-light>
-
-        <a-light type="point" color="#ec9e35" distance="10" position="12 0 0">
-          <a-animation attribute="intensity" from="0" to="1" delay="1000" dur="1000" fill="both"></a-animation>
-        </a-light>
-        -->
-
-        <!-- down light -->
-        <!--
-        <a-light type="point" color="#ec9e35" distance="10" position="-12 -10 0">
-          <a-animation attribute="intensity" from="0" to="1" delay="1000" dur="1000" fill="both"></a-animation>
-        </a-light>
-
-        <a-light type="point" color="#ec9e35" distance="10" position="12 -10 0">
-          <a-animation attribute="intensity" from="0" to="1" delay="1000" dur="1000" fill="both"></a-animation>
-        </a-light>
-
-        <a-light type="point" color="#ec9e35" distance="10" position="0 -10 0">
-          <a-animation attribute="intensity" from="0" to="1" delay="1000" dur="1000" fill="both"></a-animation>
-        </a-light>
-        -->
-      </a-entity>
-
-      <!-- B lights -->
-      <a-entity id="B-Lights" position="0 0 -17.5">
-        <a-light type="point" color="#ec9e35" distance="10" position="-12 10 0">
-          <a-animation attribute="intensity" from="0" to="1.5" delay="2000" dur="1000" fill="both"></a-animation>
-        </a-light>
-
-        <a-light type="point" color="#ec9e35" distance="10" position="12 10 0">
-          <a-animation attribute="intensity" from="0" to="1.5" delay="2000" dur="1000" fill="both"></a-animation>
-        </a-light>
-
-        <a-light type="point" color="#ec9e35" distance="10" position="0 10 0">
-          <a-animation attribute="intensity" from="0" to="1.5" delay="2000" dur="1000" fill="both"></a-animation>
-        </a-light>
+          <a-light type="point" color="#ec9e35" distance="10" position="0 10 0">
+            <a-animation attribute="intensity" from="0" to="1.5" delay="2000" dur="1000" fill="both"></a-animation>
+          </a-light>
 
         <!-- center light -->
         <!--
@@ -156,51 +115,30 @@
           <a-animation attribute="intensity" from="0" to="1.5" delay="2000" dur="1000" fill="both"></a-animation>
         </a-light>
         -->
+        </a-entity>
+
+
+        <!-- A lights -->
+        <a-entity id="A-Lights" position="0 0 -26">
+          <a-light type="point" color="#ec9e35" distance="10" position="-12 10 0">
+            <a-animation attribute="intensity" from="0" to="2" delay="3000" dur="1000" fill="both"></a-animation>
+          </a-light>
+
+          <a-light type="point" color="#ec9e35" distance="10" position="12 10 0">
+            <a-animation attribute="intensity" from="0" to="2" delay="3000" dur="1000" fill="both"></a-animation>
+          </a-light>
+
+          <a-light type="point" color="#ec9e35" distance="10" position="0 10 0">
+            <a-animation attribute="intensity" from="0" to="2" delay="3000" dur="1000" fill="both"></a-animation>
+          </a-light>
+        </a-entity>
+
       </a-entity>
 
-
-      <!-- A lights -->
-      <a-entity id="A-Lights" position="0 0 -26">
-        <a-light type="point" color="#ec9e35" distance="10" position="-12 10 0">
-          <a-animation attribute="intensity" from="0" to="2" delay="3000" dur="1000" fill="both"></a-animation>
+        <!-- 環境光 -->
+        <a-light type="ambient">
+          <a-animation attribute="color" from="#000000" to="#4d4d4d" dur="5000" easing="ease-in-out"></a-animation>
         </a-light>
-
-        <a-light type="point" color="#ec9e35" distance="10" position="12 10 0">
-          <a-animation attribute="intensity" from="0" to="2" delay="3000" dur="1000" fill="both"></a-animation>
-        </a-light>
-
-        <a-light type="point" color="#ec9e35" distance="10" position="0 10 0">
-          <a-animation attribute="intensity" from="0" to="2" delay="3000" dur="1000" fill="both"></a-animation>
-        </a-light>
-
-        <!-- center light -->
-        <!--
-        <a-light type="point" color="#ec9e35" distance="10" position="-12 0 0">
-          <a-animation attribute="intensity" from="0" to="2" delay="3000" dur="1000" fill="both"></a-animation>
-        </a-light>
-
-        <a-light type="point" color="#ec9e35" distance="10" position="12 0 0">
-          <a-animation attribute="intensity" from="0" to="2" delay="3000" dur="1000" fill="both"></a-animation>
-        </a-light>
-
-        <a-light type="point" color="#ec9e35" distance="10" position="-12 -10 0">
-          <a-animation attribute="intensity" from="0" to="2" delay="3000" dur="1000" fill="both"></a-animation>
-        </a-light>
-
-        <a-light type="point" color="#ec9e35" distance="10" position="12 -10 0">
-          <a-animation attribute="intensity" from="0" to="2" delay="3000" dur="1000" fill="both"></a-animation>
-        </a-light>
-
-        <a-light type="point" color="#ec9e35" distance="10" position="0 -10 0">
-          <a-animation attribute="intensity" from="0" to="2" delay="3000" dur="1000" fill="both"></a-animation>
-        </a-light>
-        -->
-      </a-entity>
-
-      <!-- 環境光 -->
-      <a-light type="ambient">
-        <a-animation attribute="color" from="#000000" to="#4d4d4d" dur="5000" easing="ease-in-out"></a-animation>
-      </a-light>
 
     </a-scene>
   </body>
